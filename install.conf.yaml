@@ -1,0 +1,15 @@
+- defaults: { link: { create: true, relink: true, force: true } }
+- clean: ['~']
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+- create:
+   - ~/.nvm
+
+- link:
+    ~/.zshrc: { path: .zshrc }
+    ~/.zsh-config: { path: zsh }
+    ~/.path: { path: .path }
+    ~/.aliases: { path: aliases }
+    ~/.functions: { path: functions }
+    ~/.tmux.conf: { path: tmux/tmux.conf }
+    ~/.tigrc: { path: tig/.tigrc }
