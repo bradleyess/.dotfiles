@@ -14,7 +14,7 @@ brew update && brew upgrade
 apps=(
     # Utility Packages / Better Defaults
     curl coreutils findutils moreutils bat tree wget gnu-sed grep ripgrep fd fdupes
-    tmux
+    tmux awscli
 
     # Git
     git git-extras hub tig
@@ -33,7 +33,7 @@ apps=(
     docker docker-machine kubectl minikube helm
 
     # Terraform
-    terraform terragrunt tflint
+    terraform terragrunt tflint k2tf
 
     # Programming Languages
     node nvm go rust
