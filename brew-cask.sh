@@ -13,27 +13,16 @@ brew cask outdated # List outdated casks.
 
 # Install packages
 apps=(
+
     # Browsers
-    firefox firefoxnightly
-    google-chrome google-chrome-canary phantomjs # Phantom runs headless Chrome.
+    firefox firefoxnightly google-chrome google-chrome-canary phantomjs
 
     # Automation/Productivity/Team Tools.
-    alfred # Spotlight on speed. Ask for serial.
-    dash # Offline programming documentation. Ask for serial.
-    hazel # Task runner.
-    harvest # Time tracking.
-    flux # Screen luminescence manager.
-    screenflow # Screen recording.
-    slack # Team communication.
-    transmission # Lightweight torrent client.
-    textual # IRC Client.
-    the-unarchiver # Decompress/Compress .zip/.rar etc.
-
-    # Secure password management
-    1password # Online/Shared
-    keepassx # Offline
+    alfred dash hazel harvest flux screenflow slack transmission textual the-unarchiver
+    1password keepassx
 
     # Developer Tools (Editors/IDE/Terminal)
+    aws-vault
     visual-studio-code
     iterm2
     transmit # SFTP & Amazon S3 File Transfer
