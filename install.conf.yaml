@@ -13,3 +13,6 @@
     ~/.functions: { path: functions }
     ~/.tmux.conf: { path: tmux/tmux.conf }
     ~/.tigrc: { path: tig/.tigrc }
+
+- shell:
+    - [. $HOME/.dotfiles/pip/pip.sh, Installing Pip Packages]
