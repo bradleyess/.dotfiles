@@ -2,6 +2,9 @@
     name = Bradley Shawyer
     email = bradley@blstr.co
 
+[color]
+  ui = true
+
 [color "diff"]
   meta = "yellow bold"
   commit = "green bold"
