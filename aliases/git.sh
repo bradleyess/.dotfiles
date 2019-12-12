@@ -4,4 +4,4 @@
 alias gs="tig status"
 alias tss="tig status"
 
-alias gim="git commit -m"
+alias gim="git cz || git commit -m"
