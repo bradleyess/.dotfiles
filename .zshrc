@@ -1,5 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
+autoload -Uz compinit
+compinit
 
 plugins=(zsh-autosuggestions git colored-man-pages)
 
