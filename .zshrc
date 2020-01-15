@@ -5,7 +5,7 @@ compinit
 
 plugins=(zsh-autosuggestions git colored-man-pages)
 
-# Load aliases, exports and PATH.
+# Load exports and PATH.
 for file in ~/.{path,exports}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
@@ -15,6 +15,7 @@ unset file
 for module in ~/.{aliases,functions}/*; do
   source $module
 done
+unset module
 
 # Loads `pre`, `config` + `post` in that order
 bootstrap() {
@@ -63,3 +64,12 @@ source "$HOME/.zplugin/bin/zplugin.zsh"
 source "$HOME/.dotfiles/zsh/zplugin.zsh"
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/bx/linktr.ee/monorepo/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/bx/linktr.ee/monorepo/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/bx/linktr.ee/monorepo/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/bx/linktr.ee/monorepo/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/bx/linktr.ee/monorepo/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/bx/linktr.ee/monorepo/node_modules/tabtab/.completions/slss.zsh
