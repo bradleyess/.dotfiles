@@ -1,0 +1,7 @@
+---
+- name: Ensure empty directories in downloads are removed daily
+  cron:
+    user: "{{ current_user.stdout }}"
+    name: downloads.emptyDirectories
+    special_time: daily
+    job: "find $HOME/Downloads/Music\ Downloads -type d -empty -delete"

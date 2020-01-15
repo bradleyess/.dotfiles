@@ -1,0 +1,7 @@
+#!/usr/bin/env ansible-playbook
+- hosts: localhost
+  connection: local
+  become: true
+  roles:
+  - { role: bootstrap, tags: [bootstrap] }
+  - { role: cron, tags: [cron] }
