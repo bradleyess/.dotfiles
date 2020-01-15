@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 # Always start tmux with SSH session
-alias ssh=ssh -t -- /bin/sh -c 'tmux has-session && exec tmux attach || exec tmux'
+alias startSshAgent="eval $(ssh-agent -s)"
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '📋    => Public key copied to clipboard'"
