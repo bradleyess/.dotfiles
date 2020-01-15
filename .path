@@ -1,25 +1,32 @@
-# Explicitly configured $PATH
+unset PATH
+# Default
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # Directories to be prepended to $PATH
-declare -a dirs_to_prepend
-dirs_to_prepend=(
-  "/.yarn/bin"
-  "/usr/bin"
+declare -a customPath
+customPath=(
   "/usr/local"
-  "/usr/local/bin"
   "/usr/local/opt/ncurses/bin"
   "/usr/local/sbin"
+  "/usr/local/opt/python/libexec/bin"
   "$HOME/.cargo/bin"
   "$HOME/.composer/vendor/bin"
+  "$HOME/.yarn/bin"
+  "${KREW_ROOT:-$HOME/.krew}/bin"
+  "/usr/local/bin"
 )
 
-for dir in ${(k)dirs_to_prepend[@]}
+for dir in ${(k)customPath[@]}
 do
   if [ -d ${dir} ]; then
     PATH="${dir}:$PATH"
   fi
 done
 
-unset dirs_to_prepend
+unset customPath
+
+
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
 export PATH
