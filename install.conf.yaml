@@ -9,10 +9,15 @@
     ~/.zshrc: { path: .zshrc }
     ~/.zsh-config: { path: zsh }
     ~/.path: { path: .path }
+    ~/.exports: { path: .exports }
     ~/.aliases: { path: aliases }
     ~/.functions: { path: functions }
-    ~/.tmux.conf: { path: tmux/tmux.conf }
     ~/.tigrc: { path: tig/.tigrc }
+    ~/.tmux.conf: { path: tmux/tmux.conf }
+    ~/.tmux.conf.local: { path: tmux/tmux.conf.local }
+    ~/.tmux.d: { path: tmux/config/ }
 
 - shell:
     - [. $HOME/.dotfiles/pip/pip.sh, Installing Pip Packages]
+    # @todo - Ensure this only runs if TPM is not already installed.
+    - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm, Installing Tmux Plugin Manager]

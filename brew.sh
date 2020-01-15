@@ -12,9 +12,12 @@ fi
 brew update && brew upgrade
 
 apps=(
+    # Audio
+    exiftool
+
     # Utility Packages / Better Defaults
     curl coreutils findutils moreutils bat tree wget gnu-sed grep ripgrep fd fdupes
-    tmux awscli tldr gpg jq
+    tmux awscli tldr gpg jq z grc circleci mkcert nss reattach-to-user-namespace
 
     # Git
     git git-extras hub tig git-crypt diff-so-fancy

@@ -13,13 +13,15 @@ brew cask outdated # List outdated casks.
 
 # Install packages
 apps=(
+    # Audio
+    kid3
 
     # Browsers
     firefox firefoxnightly google-chrome google-chrome-canary phantomjs
 
     # Automation/Productivity/Team Tools.
     alfred dash hazel harvest flux screenflow slack transmission textual the-unarchiver
-    1password keepassx
+    1password keepassx macpass
 
     # Developer Tools (Editors/IDE/Terminal)
     aws-vault
