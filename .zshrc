@@ -73,3 +73,7 @@ autoload -Uz _zplugin
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/bx/linktr.ee/monorepo/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/bx/linktr.ee/monorepo/node_modules/tabtab/.completions/slss.zsh
+source /Users/bx/Library/Preferences/org.dystroy.broot/launcher/bash/br
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
