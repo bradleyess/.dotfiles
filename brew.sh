@@ -12,39 +12,21 @@ fi
 brew update && brew upgrade
 
 apps=(
-    # Audio
-    exiftool
+    # Multimedia
+    exiftool guetzli imagemagick jpeg libpng optipng ffmpeg
 
-    # Utility Packages / Better Defaults
-    curl coreutils findutils moreutils bat tree wget gnu-sed grep ripgrep fd fdupes
-    tmux awscli tldr gpg jq z grc circleci mkcert nss reattach-to-user-namespace
+    # Shell and CLI
+    awscli bat circleci coreutils curl diff-so-fancy fd fdupes findutils git git-crypt git-extras gnu-sed gpg grc grep
+    httpie hub jq mkcert moreutils mtr mutt nss reattach-to-user-namespace ripgrep tig tldr tmux tree wget z
 
-    # Git
-    git git-extras hub tig git-crypt diff-so-fancy
 
-    # Generic
-    httpie mutt
-
-    # Networking
-    mtr # Powerful ping/traceroute amalgamation. https://www.bitwizard.nl/mtr/
-
-    # Media Processing
-    guetzli imagemagick jpeg libpng optipng # Images
-    ffmpeg # Movies
-
-    # Docker & Kubernetes
     docker docker-machine kubectl minikube helm
-
-    # Terraform
     terraform terragrunt tflint
 
-    # Programming Languages
+    python pyenv
     node nvm go rust
-
-    # Package Managers
     yarn
 
-    # Better shell. Read : http://ohmyz.sh/
     zsh zsh-completions zsh-syntax-highlighting zplug
 )
 
