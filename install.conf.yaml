@@ -16,6 +16,7 @@
     ~/.tmux.conf: { path: tmux/tmux.conf }
     ~/.tmux.conf.local: { path: tmux/tmux.conf.local }
     ~/.tmux.d: { path: tmux/config/ }
+    $HOME/Library/Preferences/org.dystroy.broot/conf.toml: { path: broot.toml }
 
 - shell:
     - [. $HOME/.dotfiles/pip/pip.sh, Installing Pip Packages]
