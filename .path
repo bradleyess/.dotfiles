@@ -6,6 +6,7 @@ PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 declare -a customPath
 customPath=(
   "/usr/local"
+  "$HOME/.local/bin"
   "/usr/local/opt/ncurses/bin"
   "/usr/local/sbin"
   "/usr/local/opt/python/libexec/bin"
