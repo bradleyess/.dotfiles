@@ -4,4 +4,4 @@
     user: "{{ current_user.stdout }}"
     name: downloads.emptyDirectories
     special_time: daily
-    job: "find $HOME/Downloads/Music\ Downloads -type d -empty -delete"
+    job: "find /Users/{{ current_user.stdout }}/Downloads/Music\ Downloads -type d -empty -delete"
