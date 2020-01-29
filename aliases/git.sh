@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Status
 alias gs="tig status"
-alias tss="tig status"
-
 alias gim="git cz || git commit -m"
-alias gcmp="gco master && git pull"
+alias gcmp="gco master && git fetch && git reset --hard origin/master"
