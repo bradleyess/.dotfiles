@@ -1,3 +1,4 @@
-zplugin light zsh-users/zsh-autosuggestions
-zplugin ice as"program" pick"bin/git-dsf"
-zplugin light zdharma/zsh-diff-so-fancy
+zinit ice as"program" pick"bin/git-dsf"
+zinit light zdharma/zsh-diff-so-fancy
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma/fast-syntax-highlighting
