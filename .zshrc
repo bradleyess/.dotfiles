@@ -2,7 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 autoload -Uz compinit
 compinit
-
+source "$HOME/.zinit/bin/zinit.zsh"
 plugins=(zsh-autosuggestions git colored-man-pages)
 
 # Load exports and PATH.
@@ -58,12 +58,6 @@ bootstrap "$HOME/.zsh-config/config"
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 source $ZSH/oh-my-zsh.sh
-
-# Keep at the end of the zshrc
-source "$HOME/.zplugin/bin/zplugin.zsh"
-source "$HOME/.dotfiles/zsh/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
 
 source /Users/bx/Library/Preferences/org.dystroy.broot/launcher/bash/br
 if command -v pyenv 1>/dev/null 2>&1; then
