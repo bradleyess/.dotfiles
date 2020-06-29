@@ -18,18 +18,19 @@ apps=(
     # Shell and CLI
     awscli bat circleci coreutils curl diff-so-fancy fd fdupes findutils git git-crypt git-extras gnu-sed gpg grc grep
     httpie hub jq mkcert moreutils mtr mutt nss reattach-to-user-namespace ripgrep tig tldr tmux tree wget z xsv
+    adr-tools fastly/tap/fastly
 
     docker docker-machine kubectl minikube helm
     terraform terragrunt tflint
 
     python3 pyenv
-    node nvm go rust
+    node go rust
     yarn
 
     zsh zsh-completions zsh-syntax-highlighting zplug
 
     # Creative Coding / C++
-    pkg-config gcc readline sqlite gdbm freetype libpng
+    pkg-config gcc readline sqlite gdbm freetype
     eigen libyaml fftw libsamplerate libtag tensorflow
     cairo
 )
