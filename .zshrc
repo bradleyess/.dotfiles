@@ -63,3 +63,5 @@ source /Users/bx/Library/Preferences/org.dystroy.broot/launcher/bash/br
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+complete -o nospace -C /usr/local/bin/terraform terraform
