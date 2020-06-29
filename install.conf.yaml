@@ -10,6 +10,7 @@
     ~/.zsh-config: { path: zsh }
     ~/.path: { path: .path }
     ~/.exports: { path: .exports }
+    ~/.secrets: { path: .secrets }
     ~/.aliases: { path: aliases }
     ~/.functions: { path: functions }
     ~/.tigrc: { path: tig/.tigrc }
@@ -22,4 +23,7 @@
     - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)", Installing zinit]
     - [. $HOME/.dotfiles/pip/pip.sh, Installing Pip Packages]
     # @todo - Ensure this only runs if TPM is not already installed.
+    # - @todo - Use bootsrap-tmux.sh instead.
     - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm, Installing Tmux Plugin Manager]
+    - [wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator]
+    - [git clone git@github.com:superbrothers/zsh-kubectl-prompt.git $HOME/.dotfiles/zsh/config/kubectl-prompt, Installing kubectl ZSH prompt]
