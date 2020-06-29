@@ -1,4 +1,4 @@
-ansible==2.9
+ansible==2.9.2
 numpy
 matplotlib
 pyyaml
