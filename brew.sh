@@ -11,6 +11,12 @@ fi
 # Make sure we’re using the latest Homebrew & latest formulae.
 brew update && brew upgrade
 
+taps=(
+    buildkite/cli
+)
+
+brew tap "${taps[@]}"
+
 apps=(
     # Multimedia
     exiftool guetzli imagemagick jpeg libpng optipng ffmpeg
