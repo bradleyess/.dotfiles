@@ -57,11 +57,12 @@ bootstrap "$HOME/.zsh-config/config"
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-source $ZSH/oh-my-zsh.sh
-
+# @todo - Add to Broot file
 source /Users/bx/Library/Preferences/org.dystroy.broot/launcher/bash/br
+
+# @todo - Add to Pyenv file.
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-complete -o nospace -C /usr/local/bin/terraform terraform
+source $ZSH/oh-my-zsh.sh
