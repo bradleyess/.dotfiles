@@ -3,7 +3,6 @@ ZSH_THEME="robbyrussell"
 autoload -Uz compinit
 compinit
 source "$HOME/.zinit/bin/zinit.zsh"
-plugins=(zsh-autosuggestions git colored-man-pages)
 
 # Load exports and PATH.
 for file in ~/.{path,exports}; do
@@ -18,9 +17,12 @@ done
 unset module
 
 # Loads `pre`, `config` + `post` in that order
+
+# @todo - Tidy this sucker up!
 bootstrap() {
   _dir="$1"
   if [ -d "$_dir" ]; then
+
     if [ -d "$_dir/pre" ]; then
       for config in "$_dir"/pre/**/*~*.zwc(N-.); do
         . $config
@@ -53,9 +55,7 @@ bootstrap() {
 }
 
 bootstrap "$HOME/.zsh-config/config"
-
-# Local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+bootstrap "$HOME/.zsh-config/plugins"
 
 # @todo - Add to Broot file
 source /Users/bx/Library/Preferences/org.dystroy.broot/launcher/bash/br

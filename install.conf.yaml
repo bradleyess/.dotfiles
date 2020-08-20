@@ -20,10 +20,8 @@
     $HOME/Library/Preferences/org.dystroy.broot/conf.toml: { path: broot.toml }
 
 - shell:
-    - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)", Installing zinit]
     - [. $HOME/.dotfiles/pip/pip.sh, Installing Pip Packages]
+    - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)", Install zplug]
     # @todo - Ensure this only runs if TPM is not already installed.
     # - @todo - Use bootsrap-tmux.sh instead.
-    - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm, Installing Tmux Plugin Manager]
     - [wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator]
-    - [git clone git@github.com:superbrothers/zsh-kubectl-prompt.git $HOME/.dotfiles/zsh/config/kubectl-prompt, Installing kubectl ZSH prompt]
