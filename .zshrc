@@ -59,6 +59,7 @@ bootstrap "$HOME/.zsh-config/plugins"
 
 # @todo - Add to Broot file
 source /Users/bx/Library/Preferences/org.dystroy.broot/launcher/bash/br
+plugins=(git)
 
 # @todo - Add to Pyenv file.
 if command -v pyenv 1>/dev/null 2>&1; then
