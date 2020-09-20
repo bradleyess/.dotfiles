@@ -6,6 +6,7 @@
    - ~/.nvm
 
 - link:
+    ~/.gitconfig: { path: .gitconfig }
     ~/.zshrc: { path: .zshrc }
     ~/.zsh-config: { path: zsh }
     ~/.path: { path: .path }
