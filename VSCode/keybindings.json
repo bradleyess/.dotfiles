@@ -1,0 +1,69 @@
+[
+    // Place your key bindings in this file to overwrite the defaults
+    {
+        "key": "cmd+shift+r",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "ctrl+alt+p",
+        "command": "php-cs-fixer.fix"
+    },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.showContextMenu",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+f10",
+        "command": "-editor.action.showContextMenu",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+=",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+shift+r",
+        "command": "workbench.action.tasks.restartTask",
+    },
+    // Terminal
+    {
+        "key": "cmd+shift+k",
+        "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "cmd+shift+j",
+        "command": "workbench.action.terminal.focusPrevious"
+    },
+    // Quokka
+    {
+        "key": "cmd+alt+/",
+        "command": "type",
+        "args": {
+            "text": "/*?*/"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+alt+shift+/",
+        "command": "type",
+        "args": {
+            "text": "/*?.*/"
+        },
+        "when": "editorTextFocus"
+    },
+]
