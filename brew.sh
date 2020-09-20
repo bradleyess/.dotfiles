@@ -23,7 +23,7 @@ apps=(
 
     # Shell and CLI
     awscli bat circleci coreutils curl diff-so-fancy fd fdupes findutils git git-crypt git-extras gnu-sed gpg grc grep
-    httpie hub jq mkcert moreutils mtr mutt nss reattach-to-user-namespace ripgrep tig tldr tmux tree wget z xsv
+    exa httpie hub jq mkcert moreutils mtr mutt nss reattach-to-user-namespace ripgrep tig tldr tmux tree wget z xsv
     adr-tools fastly/tap/fastly
 
     docker docker-machine kubectl minikube helm
