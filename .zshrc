@@ -14,26 +14,26 @@ unset file
 
 # Load all functions + aliases
 for module in ~/.{aliases,functions}/*; do
-  source "$module"
+    source "$module"
 done
 unset module
 
 # @todo - Tidy this sucker up!
 bootstrap() {
-  directory="$1"
+    directory="$1"
 
-  if [ -d "$directory" ]; then
-    for config in "$directory"/**/*(N-.); do
-        . "$config"
-    done
-  fi
+    if [ -d "$directory" ]; then
+        for config in "$directory"/**/*(N-.); do
+            . "$config"
+        done
+    fi
 }
 
 bootstrap "$HOME/.zsh-config/config"
 bootstrap "$HOME/.zsh-config/plugins"
 
 if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
+    eval "$(pyenv init -)"
 fi
 
 source "$ZSH/oh-my-zsh.sh"
