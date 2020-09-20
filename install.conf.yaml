@@ -17,11 +17,7 @@
     ~/.tmux.conf: { path: tmux/tmux.conf }
     ~/.tmux.conf.local: { path: tmux/tmux.conf.local }
     ~/.tmux.d: { path: tmux/config/ }
-    $HOME/Library/Preferences/org.dystroy.broot/conf.toml: { path: broot.toml }
 
 - shell:
-    - [. $HOME/.dotfiles/pip/pip.sh, Installing Pip Packages]
-    - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)", Install zplug]
-    # @todo - Ensure this only runs if TPM is not already installed.
-    # - @todo - Use bootsrap-tmux.sh instead.
-    - [wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator]
+    - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)", Installing Oh My ZSH]
+    - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)", Installing zplug]
