@@ -26,6 +26,7 @@ apps=(
     adr-tools fastly/tap/fastly
     docker docker-machine kubectl minikube helm kubectx kube-ps1 kubespy
     terraform terragrunt tflint
+    pulumi
     python3 pyenv
     node go rust
     yarn
