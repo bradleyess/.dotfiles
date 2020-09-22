@@ -9,6 +9,7 @@
     ~/.gitconfig: { path: .gitconfig }
     ~/.zshrc: { path: .zshrc }
     ~/.zsh-config: { path: zsh }
+    ~/.oh-my-zsh/completions: { path: zsh/completions }
     ~/.path: { path: .path }
     ~/.exports: { path: .exports }
     ~/.secrets: { path: .secrets }
@@ -22,3 +23,5 @@
 - shell:
     - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)", Installing Oh My ZSH]
     - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)", Installing zplug]
+    - [ln -s /opt/kubectx/completion/kubectx.zsh ~/.oh-my-zsh/completions/_kubectx.zsh, Installing kubectx completions]
+    - [ln -s /opt/kubectx/completion/kubens.zsh ~/.oh-my-zsh/completions/_kubens.zsh, Installing kubens completions]
