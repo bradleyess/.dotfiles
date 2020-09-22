@@ -16,7 +16,7 @@ apps=(
 
     # Automation/Productivity/Team Tools.
     alfred dash hazel harvest flux slack transmission textual the-unarchiver 1password
-    karabiner-elements rectangle tuple keyboard-maestro
+    karabiner-elements rectangle tuple keyboard-maestro 1password nordvpn
 
     # Developer Tools (Editors/IDE/Terminal)
     aws-vault visual-studio-code iterm2
