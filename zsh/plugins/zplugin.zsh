@@ -4,6 +4,7 @@ zinit light zdharma/zsh-diff-so-fancy
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 zinit light agkozak/zsh-z
+zinit light jonmosco/kube-ps1
 
 zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
@@ -13,4 +14,5 @@ zinit wait lucid for \
     atload"unalias grv" \
     OMZP::git
 
-zinit light jonmosco/kube-ps1
+zinit wait lucid for \
+    OMZP::kubectl
