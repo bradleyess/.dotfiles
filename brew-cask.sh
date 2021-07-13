@@ -4,6 +4,7 @@
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Install Caskroom
+# @todo - is this still necessary?
 brew tap homebrew/cask
 brew tap buo/cask-upgrade
 brew install brew-cask-completion
@@ -27,10 +28,13 @@ apps=(
     kid3    # Audio metadata management
     vlc     # Best video player.
     xld     # Audio conversion GUI + CLI tool.
+
+    # Productivity tools
+    dozer # Hide menu bar icons. Open-source alternative to Bartender.
 )
 
-for application in ${apps[@]}; do
-    brew cask install $application
+for application in "${apps[@]}"; do
+    brew cask install "$application"
 done
 
 brew cu -afy # Force ugprade of all packages.

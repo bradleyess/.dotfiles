@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="robbyrussell"
+
 autoload -Uz compinit
 compinit
 
