@@ -3,7 +3,7 @@ name = Bradley Shawyer
 email = 21098019+bradleyess@users.noreply.github.com
 
 [core]
-pager = diff-so-fancy | less --tabes=4 -RFX
+pager = diff-so-fancy | less --tabs=4 -RFX
 editor = code -w
 
 [color]
