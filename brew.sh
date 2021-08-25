@@ -19,6 +19,7 @@ brew tap "${taps[@]}"
 apps=(
     # Multimedia
     exiftool guetzli imagemagick jpeg libpng optipng ffmpeg
+    blackhole-2ch blackhole-16ch
 
     # Shell and CLI
     bat coreutils curl diff-so-fancy fd fdupes findutils git git-crypt git-extras gnu-sed gpg grc grep
@@ -32,14 +33,9 @@ apps=(
     cairo
 
     # Development environment
-    awscli circleci
-    docker docker-machine docker-compose kubectl minikube helm kubectx kube-ps1 kubespy stern derailed/popeye/popeye
+    docker docker-machine docker-compose
     node go rust
-    postgres
-    pulumi
     python3 pyenv
-    terraform terragrunt tflint
-    yarn
 )
 
 brew install "${apps[@]}"
