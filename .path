@@ -15,6 +15,7 @@ customPath=(
   "$HOME/.yarn/bin"
   "${KREW_ROOT:-$HOME/.krew}/bin"
   "/usr/local/bin"
+  "$GOPATH/bin"
 )
 
 for dir in ${(k)customPath[@]}
@@ -25,7 +26,6 @@ do
 done
 
 unset customPath
-
 
 if which ruby >/dev/null && which gem >/dev/null; then
     PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
