@@ -1,0 +1,19 @@
+set from = "$PERSONAL_GMAIL_ADDRESS"
+set realname = "$PERSONAL_GMAIL_REAL_NAME"
+
+set imap_user = "$PERSONAL_GMAIL_ADDRESS"
+set imap_pass = "$PERSONAL_GMAIL_PASSWORD"
+
+set smtp_url = "$PERSONAL_GMAIL_SMTP_URL"
+set smtp_pass = "$PERSONAL_GMAIL_PASSWORD"
+set smtp_authenticators = 'gssapi:login'
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed ="+[Gmail]/Drafts"
+set header_cache =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+set certificate_file =~/.mutt/certificates
+
+set move = no
+set imap_keepalive = 900
