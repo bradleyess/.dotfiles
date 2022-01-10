@@ -26,7 +26,7 @@ apps=(
 )
 
 for application in "${apps[@]}"; do
-    brew cask install "$application"
+    brew install --cask "$application"
 done
 
 brew cu -afy # Force ugprade of all packages.
