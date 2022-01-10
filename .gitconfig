@@ -4,28 +4,10 @@ email = 21098019+bradleyess@users.noreply.github.com
 
 [core]
 pager = diff-so-fancy | less --tabs=4 -RFX
-editor = code -w
+	editor = code --wait
 
 [color]
 ui = true
 
-[color "diff"]
-meta = "yellow bold"
-commit = "green bold"
-frag = "magenta bold"
-old = "red bold"
-new = "green bold"
-whitespace = "red reverse"
-
-[color "diff-highlight"]
-oldNormal = "red bold"
-oldHighlight = "red bold 52"
-newNormal = "green bold"
-newHighlight = "green bold 22"
-
-# Actions
-[merge]
-ff = only
-
 [pull]
-rebase = true
+	rebase = false
