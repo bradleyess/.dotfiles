@@ -1,0 +1,88 @@
+# @todo - How do we schedule deletion of already imported files?
+
+x-shortcuts:
+  open_and_sleep_for_10_seconds: &open_and_sleep_for_10_seconds
+    shell: 'open "{path}" && sleep 10'
+  does_not_contain_delete_regex: &does_not_contain_delete_regex
+    regex: '^((?!delete).)*$'
+  book_folders: &book_folders
+    - '~/Downloads/Book Downloads'
+    - '~/tools/safaribooks/Books/*'
+
+rules:
+  # Remove old download manifest .txt files
+  - folders:
+        - '~/Downloads/Book Downloads'
+        - '~/tools/safaribooks/Books/*'
+    subfolders: true
+    filters:
+      - extension: [txt]
+      - lastmodified: { days: 1, mode: older }
+    actions: [trash]
+
+  # Remove old download manifest .txt zip files
+  - folders:
+        - '~/Downloads/Book Downloads'
+        - '~/tools/safaribooks/Books/*'
+    subfolders: true
+    filters:
+      - filename: {contains: 'txt'}
+      - extension: [zip]
+      - lastmodified: { days: 1, mode: older }
+    actions: [trash]
+
+  - folders:
+        - '~/Downloads/Book Downloads'
+        - '~/tools/safaribooks/Books/*'
+    subfolders: true
+    filters:
+      - filename: { contains: ['txt']  }
+      - extension: [zip]
+      - *does_not_contain_delete_regex
+    actions:
+      - *open_and_sleep_for_10_seconds
+      - rename: "{path.stem}.{extension}.delete"
+
+  - folders:
+        - '~/Downloads/Book Downloads'
+        - '~/tools/safaribooks/Books/*'
+    subfolders: true
+    filters:
+      - extension: [txt]
+      - *does_not_contain_delete_regex
+    actions:
+      - *open_and_sleep_for_10_seconds
+      - rename: "{path.stem}.{extension}.delete"
+
+  # Open archives and prepare for deletion.
+  - folders:
+        - '~/Downloads/Book Downloads'
+        - '~/tools/safaribooks/Books/*'
+    filters:
+      - extension: [rar]
+      - filename: { contains: [epub, pdf], case_sensitive: false }
+      - *does_not_contain_delete_regex
+    actions:
+      - *open_and_sleep_for_10_seconds
+      - rename: "{path.stem}.{extension}.delete"
+
+  # Import books into Calibre
+  - folders:
+        - '~/Downloads/Book Downloads'
+        - '~/tools/safaribooks/Books/*'
+    filters:
+      - extension: [epub, pdf, mobi]
+      - *does_not_contain_delete_regex
+    actions:
+      - *open_and_sleep_for_10_seconds
+      - rename: "{path.stem}.{extension}.delete"
+
+  # Clean up unwanted/imported files.
+  - folders:
+        - '~/Downloads/Book Downloads'
+        - '~/tools/safaribooks/Books/*'
+    filters:
+      - extension: [delete]
+      - filename: {contains: [delete]}
+      - lastmodified: { hours: 1, mode: older }
+    actions: [trash]
