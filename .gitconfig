@@ -4,10 +4,13 @@ email = 21098019+bradleyess@users.noreply.github.com
 
 [core]
 pager = diff-so-fancy | less --tabs=4 -RFX
-	editor = code --wait
+editor = code --wait
 
 [color]
 ui = true
 
 [pull]
-	rebase = false
+rebase = false
+
+[init]
+defaultBranch = main
