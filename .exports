@@ -40,3 +40,5 @@ export GPG_TTY=$(tty)
 export HOMEBREW_NO_ANALYTICS=1
 
 export GOPATH=$HOME/go
+
+echo "⚙️  Exports configured."

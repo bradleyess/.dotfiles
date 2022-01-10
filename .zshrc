@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="robbyrussell"
 
@@ -8,7 +9,7 @@ compinit
 source "$HOME/.zinit/bin/zinit.zsh"
 
 # Load exports and PATH.
-for file in ~/.{path,exports}; do
+for file in ~/.{path,exports,secrets}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -39,8 +40,8 @@ fi
 
 source "$ZSH/oh-my-zsh.sh"
 if command -v pyenv 1>/dev/null 2>&1; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init --path)"
-  eval "$(pyenv init -)"
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
+    eval "$(pyenv init -)"
 fi
