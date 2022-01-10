@@ -19,8 +19,8 @@
     ~/.tmux.conf: { path: tmux/tmux.conf }
     ~/.tmux.conf.local: { path: tmux/tmux.conf.local }
     ~/.tmux.d: { path: tmux/config/ }
-    ~/Library/LaunchAgents/com.user.loginscript.plist: { path: startup.plist }
-    ~/Library/LaunchAgents/come.user.kindle-on-mount.plist: { path: scripts/on-mount/kindle-on-mount.plist }
+    ~/Library/LaunchAgents/com.user.loginscript.plist: { path: daemons/login.plist }
+    ~/Library/LaunchAgents/come.user.kindle-on-mount.plist: { path: daemons/on-mount/kindle-on-mount.plist }
 
 - shell:
     - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)", Installing Oh My ZSH]

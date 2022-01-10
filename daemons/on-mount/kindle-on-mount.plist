@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>EnvironmentVariables</key>
+        <dict>
+        </dict>
+
+        <key>Label</key>
+        <string>com.bradleyess.kindle-on-mount</string>
+
+        <key>WatchPaths</key>
+        <array>
+            <string>/Volumes</string>
+        </array>
+
+        <key>ProgramArguments</key>
+        <array>
+            <string>/bin/zsh</string>
+            <string>-c</string>
+            <string>-l</string>
+            <string>test -d /Volumes/Kindle &amp;&amp; echo "📘 Kindle found. Sending highlights to Readwise." &amp;&amp; echo "Kindle Highlights" | /usr/local/bin/mutt -s "Highlights from Kindle" -a \/Volumes\/Kindle\/documents\/My\ Clippings.txt -- add@readwise.io</string>
+        </array>
+
+        <key>RunAtLoad</key>
+        <true/>
+
+        <key>StandardErrorPath</key>
+        <string>/tmp/com.bradleyess.kindle-on-mount.err</string>
+
+        <key>StandardOutPath</key>
+        <string>/tmp/com.bradleyess.kindle-on-mount.out</string>
+
+    </dict>
+</plist>

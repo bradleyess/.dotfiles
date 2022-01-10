@@ -9,11 +9,11 @@
         <string>com.user.loginscript</string>
 
         <key>ProgramArguments</key>
-
         <array>
-            <string>/bin/bash</string>
-            <string> -c</string>
-            <string>/Users/bradley/.dotfiles/fswatch.sh</string>
+            <string>/bin/zsh</string>
+            <string>-c</string>
+            <string>-l</string>
+            <string>$HOME/.dotfiles/fswatch.sh</string>
         </array>
 
         <key>RunAtLoad</key>
@@ -23,10 +23,10 @@
         <false/>
 
         <key>StandardOutPath</key>
-        <string>/tmp/log/launch-agent/out.log</string>
+        <string>/tmp/com.bradleyess.login.log</string>
 
         <key>StandardErrorPath</key>
-        <string>/tmp/log/launch-agent/err.log</string>
+        <string>/tmp/com.bradleyess.login.err</string>
 
     </dict>
 </plist>
