@@ -20,10 +20,8 @@ for module in ~/.{aliases,functions}/*; do
 done
 unset module
 
-# @todo - Tidy this sucker up!
 bootstrap() {
     directory="$1"
-
     if [ -d "$directory" ]; then
         for config in "$directory"/**/*(N-.); do
             . "$config"
@@ -34,11 +32,12 @@ bootstrap() {
 bootstrap "$HOME/.zsh-config/config"
 bootstrap "$HOME/.zsh-config/plugins"
 
+source "$ZSH/oh-my-zsh.sh"
+
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
 fi
 
-source "$ZSH/oh-my-zsh.sh"
 if command -v pyenv 1>/dev/null 2>&1; then
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
@@ -47,5 +46,5 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default
+    tmux source ~/.tmux.conf && tmux attach -t default || tmux new -s default
 fi
