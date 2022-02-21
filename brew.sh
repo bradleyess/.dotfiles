@@ -26,6 +26,7 @@ apps=(
     exa httpie hub jq mkcert moreutils mtr nss reattach-to-user-namespace ripgrep tig tldr tmux tree wget z xsv
     adr-tools fastly/tap/fastly fswatch
     zsh zsh-completions zsh-syntax-highlighting zplug
+    zx # Bash scripting in NodeJS.
 
     # Creative Coding / C++
     pkg-config gcc readline sqlite gdbm freetype
@@ -34,7 +35,7 @@ apps=(
 
     # Development environment
     docker docker-machine docker-compose
-    node go rust
+    node go
     python3 pyenv
 )
 
