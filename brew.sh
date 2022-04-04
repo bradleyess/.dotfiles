@@ -22,6 +22,7 @@ apps=(
 
     # Shell and CLI
     dust # du in Rust
+    dua  # Disk Cleanup utility.
     bat coreutils curl diff-so-fancy fd fdupes findutils git git-crypt git-extras gnu-sed gpg grc grep
     exa httpie hub jq mkcert moreutils mtr nss reattach-to-user-namespace ripgrep tig tldr tmux tree wget z xsv
     adr-tools fastly/tap/fastly fswatch
