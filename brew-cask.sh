@@ -11,6 +11,7 @@ apps=(
     # Automation/Productivity/Team Tools.
     flux slack transmission textual the-unarchiver
     karabiner-elements rectangle tuple keyboard-maestro nordvpn discord
+    obsidian
 
     # Developer Tools (Editors/IDE/Terminal)
     aws-vault visual-studio-code iterm2
