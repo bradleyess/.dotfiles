@@ -6,10 +6,11 @@ export ZSH_THEME="robbyrussell"
 autoload -Uz compinit
 compinit
 
-source "$HOME/.zinit/bin/zinit.zsh"
+# todo - Source differently depending on the OS.
+source $(brew --prefix)/opt/zinit/zinit.zsh
 
 # Load exports and PATH.
-for file in ~/.{path,exports,secrets}; do
+for file in ~/.{path,exports}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -48,3 +49,13 @@ fi
 if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
     tmux source ~/.tmux.conf && tmux attach -t default || tmux new -s default
 fi
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk

@@ -1,28 +1,29 @@
 unset PATH
+
 # Default
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # Directories to be prepended to $PATH
 declare -a customPath
+
 customPath=(
-  "/usr/local"
-  "$HOME/.local/bin"
-  "/usr/local/opt/ncurses/bin"
-  "/usr/local/sbin"
-  "/usr/local/opt/python/libexec/bin"
-  "$HOME/.cargo/bin"
-  "$HOME/.composer/vendor/bin"
-  "$HOME/.yarn/bin"
-  "${KREW_ROOT:-$HOME/.krew}/bin"
-  "/usr/local/bin"
-  "$GOPATH/bin"
+    "/usr/local"
+    "$HOME/.local/bin"
+    "/opt/homebrew/bin" # MacOS Monterey
+    "/usr/local/opt/ncurses/bin"
+    "/usr/local/sbin"
+    "/usr/local/opt/python/libexec/bin"
+    "$HOME/.cargo/bin"
+    "$HOME/.composer/vendor/bin"
+    "$HOME/.yarn/bin"
+    "/usr/local/bin"
+    "$GOPATH/bin"
 )
 
-for dir in ${(k)customPath[@]}
-do
-  if [ -d ${dir} ]; then
-    PATH="${dir}:$PATH"
-  fi
+for dir in "${customPath[@]}"; do
+    if [ -d "${dir}" ]; then
+        PATH="${dir}:$PATH"
+    fi
 done
 
 unset customPath

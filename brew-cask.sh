@@ -9,7 +9,7 @@ brew upgrade --cask
 # Install packages
 apps=(
     # Automation/Productivity/Team Tools.
-    alfred dash hazel flux slack transmission textual the-unarchiver
+    flux slack transmission textual the-unarchiver
     karabiner-elements rectangle tuple keyboard-maestro nordvpn discord
 
     # Developer Tools (Editors/IDE/Terminal)
