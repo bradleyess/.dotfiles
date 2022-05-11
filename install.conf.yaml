@@ -16,9 +16,6 @@
     ~/.aliases: { path: aliases }
     ~/.functions: { path: functions }
     ~/.tigrc: { path: tig/.tigrc }
-    ~/.tmux.conf: { path: tmux/tmux.conf }
-    ~/.tmux.conf.local: { path: tmux/tmux.conf.local }
-    ~/.tmux.d: { path: tmux/config/ }
     ~/Library/LaunchAgents/com.user.loginscript.plist: { path: daemons/login.plist }
     ~/Library/LaunchAgents/come.user.kindle-on-mount.plist: { path: daemons/on-mount/kindle-on-mount.plist }
 

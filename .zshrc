@@ -46,10 +46,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
 fi
 
-if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
-    tmux source ~/.tmux.conf && tmux attach -t default || tmux new -s default
-fi
-
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
