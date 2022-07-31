@@ -55,3 +55,7 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
+
+#### LINKTREE MONOREPO LOCATION CONFIG SETTING START ####
+export LINKTREE_MONOREPO_LOCATION=/Users/bradleyshawyer/linktr.ee/monorepo/
+#### LINKTREE MONOREPO LOCATION CONFIG SETTING END ####
