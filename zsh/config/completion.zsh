@@ -9,6 +9,12 @@ else
   compinit -C;
 fi;
 
-# disable zsh bundled function mtools command mcd
-# which causes a conflict.
-compdef -d mcd
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+    autoload -Uz compinit
+    compinit
+fi
+
+for completion in "completions"/**/*(N-.); do
+    . "$completion"
+done

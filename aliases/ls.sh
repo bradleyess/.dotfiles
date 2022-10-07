@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-alias ls="exa -a"
+# alias ls="exa -a"

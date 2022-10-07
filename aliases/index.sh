@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# Because typing source ~/.zshrc is too slow.
 alias reload="source ~/.zshrc"
 alias edot="code $HOME/.dotfiles"
 
