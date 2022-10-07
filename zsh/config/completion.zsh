@@ -14,3 +14,7 @@ if type brew &>/dev/null; then
     autoload -Uz compinit
     compinit
 fi
+
+for completion in "completions"/**/*(N-.); do
+    . "$completion"
+done

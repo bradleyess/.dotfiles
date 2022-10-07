@@ -2,13 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
-        <key>EnvironmentVariables</key>
-        <dict>
-        </dict>
-
         <key>Label</key>
-        <string>com.bradleyess.kindle-on-mount</string>
+        <string>com.ttmmoonnoo.onmount-kindle</string>
 
+        <!-- Program -->
         <key>WatchPaths</key>
         <array>
             <string>/Volumes</string>
@@ -25,11 +22,12 @@
         <key>RunAtLoad</key>
         <true/>
 
+        <!-- Logging -->
         <key>StandardErrorPath</key>
-        <string>/tmp/com.bradleyess.kindle-on-mount.err</string>
+        <string>/tmp/com.ttmmoonnoo.onmount-kindle.err</string>
 
         <key>StandardOutPath</key>
-        <string>/tmp/com.bradleyess.kindle-on-mount.out</string>
+        <string>/tmp/com.ttmmoonnoo.onmount-kindle.out</string>
 
     </dict>
 </plist>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.ttmoonnoo.scheduled.values-journal</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/zsh</string>
+        <string>-c</string>
+        <string>-l</string>
+        <string>osascript $HOME/.dotfiles/daemons/scheduled/values-journal/script.scpt</string>
+    </array>
+
+    <key>StartInterval</key>
+    <integer>1800</integer>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/values-journal.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/values-journal.err</string>
+</dict>
+</plist>

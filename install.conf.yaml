@@ -17,9 +17,12 @@
     ~/.functions: { path: functions }
     ~/.tigrc: { path: tig/.tigrc }
     ~/Library/LaunchAgents/com.user.loginscript.plist: { path: daemons/login.plist }
-    ~/Library/LaunchAgents/come.user.kindle-on-mount.plist: { path: daemons/on-mount/kindle-on-mount.plist }
+    ~/Library/LaunchAgents/com.user.scheduled.open-obsmd.plist: { path: daemons/scheduled/open-obsmd/launchd.plist }
+    ~/Library/LaunchAgents/com.user.scheduled.values-journal.plist: { path: daemons/scheduled/values-journal/launchd.plist }
+    ~/Library/LaunchAgents/come.user.onmount.kindle.plist: { path: daemons/onmount/kindle/launchd.plist }
 
 - shell:
     - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)", Installing Oh My ZSH]
     - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)", Installing zplug]
     - [/usr/bin/env bash $HOME/.dotfiles/pip/pip.sh, "Install pip dependencies"]
+    # todo - Load and start LaunchD scripts programmatically.
