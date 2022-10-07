@@ -15,7 +15,6 @@ apps=(
 
     # Developer Tools (Editors/IDE/Terminal)
     aws-vault visual-studio-code iterm2
-    flyctl # Edge Deployments
 
     # Media Players/Convertors.
     calibre # eBook conversion/management | https://manual.calibre-ebook.com/generated/en/cli-index.html
