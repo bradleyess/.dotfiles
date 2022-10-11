@@ -11,7 +11,7 @@
             <string>/bin/zsh</string>
             <string>-c</string>
             <string>-l</string>
-            <string>osascript $HOME/.dotfiles/daemons/scheduled/focus-obsmd/script.scpt</string>
+            <string>osascript $HOME/.dotfiles/daemons/scheduled/open-obsmd/script.scpt</string>
         </array>
         <key>StartInterval</key>
         <integer>3720</integer>
