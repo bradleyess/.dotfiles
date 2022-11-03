@@ -18,7 +18,6 @@
     ~/.tigrc: { path: tig/.tigrc }
     ~/Library/LaunchAgents/com.user.loginscript.plist: { path: daemons/login.plist }
     ~/Library/LaunchAgents/com.user.scheduled.open-obsmd.plist: { path: daemons/scheduled/open-obsmd/launchd.plist }
-    ~/Library/LaunchAgents/com.user.scheduled.values-journal.plist: { path: daemons/scheduled/values-journal/launchd.plist }
     ~/Library/LaunchAgents/come.user.onmount.kindle.plist: { path: daemons/onmount/kindle/launchd.plist }
 
 - shell:
