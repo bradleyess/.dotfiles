@@ -16,8 +16,10 @@
     ~/.aliases: { path: aliases }
     ~/.functions: { path: functions }
     ~/.tigrc: { path: tig/.tigrc }
+    ~/.warp: { path: .warp }
+
+    # Daemons
     ~/Library/LaunchAgents/com.user.loginscript.plist: { path: daemons/login.plist }
-    ~/Library/LaunchAgents/com.user.scheduled.open-obsmd.plist: { path: daemons/scheduled/open-obsmd/launchd.plist }
     ~/Library/LaunchAgents/come.user.onmount.kindle.plist: { path: daemons/onmount/kindle/launchd.plist }
 
 - shell:
