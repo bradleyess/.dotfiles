@@ -13,6 +13,3 @@ zinit wait lucid for \
     OMZL::git.zsh \
     atload"unalias grv" \
     OMZP::git
-
-zinit wait lucid for \
-    OMZP::kubectl

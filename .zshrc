@@ -10,9 +10,6 @@ compinit
 source $(brew --prefix)/opt/zinit/zinit.zsh
 source "$HOME/.zinit/bin/zinit.zsh"
 
-# Install kubectl autocompletion
-source <(kubectl completion zsh)
-
 # Load exports and PATH.
 for file in ~/.{path,exports}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file"
