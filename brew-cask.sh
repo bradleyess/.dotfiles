@@ -10,8 +10,8 @@ brew upgrade --cask
 apps=(
     # Automation/Productivity/Team Tools.
     flux slack transmission textual the-unarchiver
-    karabiner-elements tuple keyboard-maestro nordvpn discord
-    obsidian
+    karabiner-elements keyboard-maestro nordvpn discord
+    obsidian raycast
 
     # Developer Tools (Editors/IDE/Terminal)
     aws-vault visual-studio-code iterm2
@@ -26,6 +26,8 @@ apps=(
     dozer # Hide menu bar icons. Open-source alternative to Bartender.
     todoist
     rectangle
+    cron      # Calendar
+    1password # Password manager
 )
 
 for application in "${apps[@]}"; do
